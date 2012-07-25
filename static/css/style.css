@@ -15,27 +15,28 @@
 
 body {
 	font-family:		"DejaVu Sans", "Lucida Sans", "sans-serif" Arial;
-	font-size:			16px;
+	font-size:			18px;
 	line-height:		2;
 	background-color:	#CDCDCD;
 	color:				#010101;
 }
 
-.header {
+div.header {
 	font-family:		"Helvetica", Arial;
-	font-size:			32px;
+	font-size:			36px;
 	background-color:	#EFEFEF;
 	color:				#232323;
+	padding-left:		10px;
 }
 
-.container {
+div.container {
 	width:				80%;
 	background-color:	#FFFEEE;
 }
 
-.footer {
+div.footer {
 	text-align:			right;
-	font-size:			50%;
+	font-size:			9px;
 	color:				#BCBCBC;
 }
 
