@@ -83,31 +83,30 @@ div.footer {
 }
 
 table.buildTable {
-	border:				2px single #111111;
+	border:				2px single black;
 	padding:			5px;
 	text-align:			left;
-	border-style:		none;
 	margin-left:		auto;
 	margin-right:		auto;
 }
 
 th.os {
-	border:				1px single #AAAAAA;
+	border:				1px single black;
 	width:				20%;
 }
 
 th.ver {
-	border:				1px single #AAAAAA;
+	border:				1px single black;
 	width:				15%;
 }
 
 th.md5 {
-	border:				1px single #AAAAAA;
+	border:				1px single black;
 	width:				50%;
 }
 
 th.dl {
-	border:				1px single #AAAAAA;
+	border:				1px single black;
 	width:				15%;
 }
 
