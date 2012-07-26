@@ -1,17 +1,46 @@
 ::selection {
-	background:			#1cc644;
+	background:			#1CC644;
 	color:				#FFFFFF;
 }
 
 ::-moz-selection {
-	background:			#1cc644;
+	background:			#1CC644;
 	color:				#FFFFFF;
 }
 
 ::-webkit-selection {
-	background:			#1cc644;
+	background:			#1CC644;
 	color:				#FFFFFF;
 }
+
+@font-face {
+	font-family: "pictonic";
+	src: url("../font/pictonic.eot");
+	src: url("../font/pictonic.eot?#iefix") format("eot");
+	src: local("☺"),
+	url("../font/pictonic.woff") format("woff"),
+	url("../font/pictonic.ttf") format("truetype"),
+	url("../font/pictonic.svg") format("svg");
+	font-weight: normal; font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family:"pictonic";
+	font-weight: normal; font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+ 
+a[class^="icon-"], a[class*=" icon-"], span[class^="icon-"], span[class*=" icon-"], small[class^="icon-"], small[class*=" icon-"] {
+	display: -moz-inline-stack;
+	display:inline-block;
+	zoom: 1;
+	*display: inline;
+}
+  
+.icon-cldownload:before { content:"\e001"; }
+
 
 body {
 	font-family:		"DejaVu Sans", "Lucida Sans", "sans-serif" Arial;
@@ -51,8 +80,45 @@ div.footer {
 	color:				#BCBCBC;
 }
 
+table.buildTable {
+	text-align:			left;
+	border-style:		outset;
+	padding:			5px;
+}
+
+td.os {
+	width:				20%;
+}
+
+td.ver {
+	width:				15%;
+}
+
+td.md5 {
+	width:				50%;
+}
+
+td.dl {
+	width:				15%;
+}
+
 pre {
 	font-family:		"DejaVu Sans Mono", "Monaco", monospace;
 	font-size:			12px;
 	line-height: 		1;
+}
+
+a {
+	color:				#777777;
+	text-decoration:	none;
+}
+
+a:hover {
+	color:				#1CC644;
+	text-decoration:	none;
+}
+
+a:visited {
+	color:				#222222;
+	text-decoration:	none;
 }
