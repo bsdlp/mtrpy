@@ -83,6 +83,7 @@ div.footer {
 }
 
 table.buildTable {
+	border:				2px single #111111;
 	padding:			5px;
 	text-align:			left;
 	border-style:		none;
@@ -90,19 +91,23 @@ table.buildTable {
 	margin-right:		auto;
 }
 
-td.os {
+th.os {
+	border:				1px single #AAAAAA;
 	width:				20%;
 }
 
-td.ver {
+th.ver {
+	border:				1px single #AAAAAA;
 	width:				15%;
 }
 
-td.md5 {
+th.md5 {
+	border:				1px single #AAAAAA;
 	width:				50%;
 }
 
-td.dl {
+th.dl {
+	border:				1px single #AAAAAA;
 	width:				15%;
 }
 
