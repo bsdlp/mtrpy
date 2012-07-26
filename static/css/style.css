@@ -83,6 +83,7 @@ div.footer {
 }
 
 table.buildTable {
+    font-family:        "Monaco", "Droid Sans Mono", "DejaVu Sans Mono", consolas, monospace;
 	border:				2px single black;
 	padding:			5px;
 	text-align:			left;
