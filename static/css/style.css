@@ -86,11 +86,12 @@ div.footer {
 }
 
 iframe.mtrWINDOW {
+    display:                block;
     margin-left:            auto;
     margin-right:           auto;
     border-style:           none;
-    scrolling:              no;
-    width:                  80%;
+    scrolling:              auto;
+    width:                  85%;
 }
 
 div.cLine {
