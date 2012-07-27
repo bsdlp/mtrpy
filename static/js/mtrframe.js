@@ -4,15 +4,20 @@ mtrFrameCSS .rel = "stylesheet";
 mtrFrameCSS .type = "text/css";
 frames['mtrWINDOW'].document.body.appendChild(mtrFrameCSS); */
 
-$(document).ready(function());
+$(document).ready(function()
     {
         // Set specific variable to represent all iframe tags.
-        var iFrames = $(".mtrWINDOW");
+        var iFrames = document.getElementsByTagName('iframe');
 
         // Resize heights.
-        function mtrResizeFrame()
+        function iResize()
         {
-            $(".mtrWINDOW").style.height = $(".mtrWINDOW").contentWindow.document.body.offsetHeight + 'px';
+            // Iterate through all iframes in the page.
+            for (var i = 0, j = iFrames.length; i < j; i++)
+            {
+                // Set inline style to equal the body height of the iframed content.
+                iFrames[i].style.height = iFrames[i].contentWindow.document.body.offsetHeight + 'px';
+            }
         }
 
         // Check if browser is Safari or Opera.
@@ -21,14 +26,17 @@ $(document).ready(function());
             // Start timer when loaded.
             $('iframe').load(function()
                 {
-                    setTimeout(mtrResizeFrame, 0);
+                    setTimeout(iResize, 0);
                 }
             );
 
             // Safari and Opera need a kick-start.
-            var mtrFrameSource = $(".mtrWINDOW").src;
-            $(".mtrWINDOW").src = '';
-            $(".mtrWINDOW").src = mtrFrameSource;
+            for (var i = 0, j = iFrames.length; i < j; i++)
+            {
+                var iSource = iFrames[i].src;
+                iFrames[i].src = '';
+                iFrames[i].src = iSource;
+            }
         }
         else
         {
@@ -41,3 +49,4 @@ $(document).ready(function());
             );
         }
     }
+);
