@@ -22,7 +22,7 @@ def displayMTRv4():
     return reportMTR
 
 @app.route('/c6')
-def displayMTRv4():
+def displayMTRv6():
     clientIP = request.environ.get('REMOTE_ADDR')
     reportMTR = mtr("-r","-w","-6",clientIP).stdout
     return reportMTR
