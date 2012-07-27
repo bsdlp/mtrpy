@@ -88,6 +88,11 @@ div.footer {
 iframe.mtrWINDOW {
     width:                  80%;
     height:                 100px;
+    margin-left:            auto;
+    margin-right:           auto;
+    border-style:           none;
+    width:                  100%;
+    height:                 100px;
 }
 
 div.cLine {
@@ -137,7 +142,7 @@ th.dl {
 }
 
 pre {
-    font-family:            "DejaVu Sans Mono", "Monaco", monospace;
+    font-family:            "DejaVu Sans Mono", "Monaco", consolas, monospace;
     font-size:              12px;
     line-height:            1;
 }
