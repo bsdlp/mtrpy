@@ -7,7 +7,7 @@ app = Flask(__name__)
 def displayMTR():
     clientIP = request.environ.get('REMOTE_ADDR')
     reportMTR = mtr("-r","-w",clientIP).stdout
-    return "<pre>" + reportMTR + "</pre>"
+    return "<pre>$ mtr -r -w " + clientIP + "\n" + reportMTR + "</pre>"
 
 @app.route('/c')
 def displayMTRBrowser():
