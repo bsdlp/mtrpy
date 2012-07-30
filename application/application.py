@@ -28,7 +28,7 @@ def displayMTRv6():
     return reportMTR
 
 @app.route('/ip/<targetIP>')
-def displayMTRtarget():
+def displayMTRtarget(targetIP):
     reportMTR = mtr("-r","-w",targetIP).stdout
     return reportMTR
 
