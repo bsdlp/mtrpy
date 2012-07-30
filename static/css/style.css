@@ -148,6 +148,14 @@ a {
     text-decoration:        none;
 }
 
+h1 {
+    text-shadow:            3px 0px #CDCDCD;
+}
+
+h2 {
+    text-shadow:            2px 0px #CDCDCD;
+}
+
 a:hover {
     color:                  #1CC644;
     text-decoration:        none;
