@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $(.mtrWindow).load('/');
+    $('.mtrWindow').load('/');
 });
 /* $('.mtrWindow')ajaxComplete(function(e, xhr, settings) {
     if (settings.url == '/') {
