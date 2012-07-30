@@ -85,15 +85,6 @@ div.footer {
     color:                  #BCBCBC;
 }
 
-iframe.mtrWINDOW {
-    display:                block;
-    margin-left:            auto;
-    margin-right:           auto;
-    border-style:           none;
-    scrolling:              auto;
-    width:                  85%;
-}
-
 div.mtrWindow {
     margin-left:            auto;
     margin-right:           auto;
