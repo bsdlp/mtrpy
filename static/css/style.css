@@ -94,6 +94,12 @@ iframe.mtrWINDOW {
     width:                  85%;
 }
 
+div.mtrWindow {
+    margin-left:            auto;
+    margin-right:           auto;
+    width:                  85%;
+}
+
 div.cLine {
     font-family:            "Monaco", "DejaVu Sans Mono", consolas, monospace;
     text-align:             left;

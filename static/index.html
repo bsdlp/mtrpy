@@ -7,9 +7,9 @@
 
         <link rel="stylesheet" href="/static/css/style.css" type="text/css">
 
-        <script type="text/javascript" href="/static/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
 
-        <script type="text/javascript" href="/static/js/footer.js"></script>
+        <script type="text/javascript" src="/static/js/footer.js"></script>
     </head>
     <body>
 
@@ -20,9 +20,10 @@
         <div class="container">
 
             <h2>See what MTR does:</h2>
-            <iframe class="mtrWINDOW" src="/">
+            <!-- <iframe class="mtrWINDOW" src="/">
                 <p>Running `mtr -r -w` to your location...</p>
-            </iframe>
+            </iframe> -->
+            <div class="mtrWindow"><p>Loading...</p></div>
 
             <h2>Builds:</h2>
             <table class="buildTable">
@@ -73,6 +74,8 @@
         <div class="footer">
             <p>&copy; 2012 <a href="http://sjchen.net">sjchen.net</a></p>
         </div>
+
+        <script src="/static/js/mtrframe.js" type="text/javascript"></script>
 
     </body>
 </html>
