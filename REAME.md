@@ -10,8 +10,8 @@ Visit live demo here:
 
 ## INSTALLATION
 
-    sudo apt-get install uwsgi nginx python python-distribute mtr-tiny git
-    sudo pip install pbs flask virtualenv
+    sudo apt-get install nginx python python-distribute mtr-tiny git uwsgi uwsgi-plugin-python
+    sudo pip install virtualenv
     cd /srv/www/mtrpy/application
     virtualenv env
     source env/bin/activate
