@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    $('.mtrWindow').load('/');
+    $('.mtrWindow').load('/mtrWindowRequest');
 });
