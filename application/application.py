@@ -30,5 +30,10 @@ def displayMTRtarget(targetIP):
     reportMTR = mtr("-r","-w",targetIP).stdout
     return "$ mtr -r -w " + targetIP + "\n" + reportMTR
 
+@app.route('/ipMtrForm/<targetFormIP>')
+def displayMTRForm(targetFormIP):
+    reportMTR = mtr("-r","-w",targetFormIP).stdout
+    return "<pre>$ mtr -r -w " + targetFormIP + "\n" + reportMTR + "</pre>"
+
 if __name__ == '__main__':
     app.run()
