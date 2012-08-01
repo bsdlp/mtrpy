@@ -17,20 +17,18 @@ def displayMTRBrowser():
 
 @app.route('/4/<targetIP4>')
 def displayMTRv4(targetIP4):
-    clientIP = request.environ.get('REMOTE_ADDR')
-    reportMTR = mtr("-r","-w","-4",clientIP).stdout
-    return "$ mtr -r -w " + clientIP + "\n" + reportMTR
+    reportMTR = mtr("-r","-w","-4",targetIP4).stdout
+    return "$ mtr -r -w " + targetIP4 + "\n" + reportMTR
 
 @app.route('/6/<targetIP6>')
 def displayMTRv6(targetIP6):
-    clientIP = request.environ.get('REMOTE_ADDR')
-    reportMTR = mtr("-r","-w","-6",clientIP).stdout
-    return "$ mtr -r -w " + clientIP + "\n" + reportMTR
+    reportMTR = mtr("-r","-w","-6",targetIP6).stdout
+    return "$ mtr -r -w " + targetIP6 + "\n" + reportMTR
 
 @app.route('/ip/<targetIP>')
 def displayMTRtarget(targetIP):
     reportMTR = mtr("-r","-w",targetIP).stdout
-    return "$ mtr -r -w " + clientIP + "\n" + reportMTR
+    return "$ mtr -r -w " + targetIP + "\n" + reportMTR
 
 if __name__ == '__main__':
     app.run()
