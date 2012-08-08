@@ -40,7 +40,7 @@ def reqForm():
     error = None
     if request.method == 'POST':
         submittedIP = request.form['hostName']
-        return displayMTRBrowserSubmitted(hostName)
+        return displayMTRBrowserSubmitted(submittedIP)
     return redirect(url_for('displayMTR'))
 
 if __name__ == '__main__':
