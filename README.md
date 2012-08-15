@@ -6,7 +6,7 @@ Visit live demo here:
 
 [mtr.sjchen.net/static](http://mtr.sjchen.net/static)
 
-    curl http://mtr.sjchen.net
+    curl http://mtr.io
 
 ## INSTALLATION
 
