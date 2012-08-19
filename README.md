@@ -4,7 +4,7 @@ With [flask](http://flask.pocoo.org), [pbs](https://github.com/amoffat/pbs), and
 
 Visit live demo here:
 
-[mtr.sjchen.net/static](http://mtr.sjchen.net/static)
+[mtr.io/static](http://mtr.io/static)
 
     curl http://mtr.io
 
