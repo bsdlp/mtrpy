@@ -137,6 +137,18 @@ th.dl {
     width:                  15%;
 }
 
+.mtrWindowForm {
+    text-align:             center;
+    margin-left:            auto;
+    margin-right:           auto;
+    margin-top:             5px;
+    margin-bottom:          5px;
+}
+
+#hideButton {
+    display:                none;
+}
+
 pre {
     font-family:            "DejaVu Sans Mono", "Monaco", consolas, monospace;
     font-size:              12px;
