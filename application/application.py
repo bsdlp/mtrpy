@@ -15,11 +15,6 @@ def displayMTRBrowser():
     reportMTR = mtr("-r","-w",clientIP).stdout
     return "<pre>$ mtr -r -w " + clientIP + "\n" + reportMTR + "</pre>"
 
-@app.route('/mtrWindowRequest/ip/<subFormIP>')
-def displayMTRBrowserSubmitted(subFormIP):
-    reportMTR = mtr("-r","-w",subFormIP).stdout
-    return "<pre>$ mtr -r -w " + subFormIP + "\n" + reportMTR + "</pre>"
-
 @app.route('/4/<targetIP4>')
 def displayMTRv4(targetIP4):
     reportMTR = mtr("-r","-w","-4",targetIP4).stdout
@@ -35,13 +30,12 @@ def displayMTRtarget(targetIP):
     reportMTR = mtr("-r","-w",targetIP).stdout
     return "$ mtr -r -w " + targetIP + "\n" + reportMTR
 
-@app.route('/reqForm', methods=['POST', 'GET'])
-def reqForm():
-    error = None
-    if request.method == 'POST':
-        submittedIP = request.form['hostName']
-        return displayMTRBrowserSubmitted(submittedIP)
-    return redirect(url_for('displayMTR'))
+@app.route('/targetForm')
+def targetForm():
+    clientIP = request.environ.get('REMOTE_ADDR')
+    remoteTarget = request.args.get('remoteTarget', clientIP, type=str)
+    reportMTR = mtr("-r","-w",remoteTarget).stdout
+    return "<pre>$ mtr -r -w " + remoteTarget + "\n" + reportMTR + "</pre>"
 
 if __name__ == '__main__':
     app.run()
