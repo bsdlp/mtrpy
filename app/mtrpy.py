@@ -3,6 +3,6 @@ from flask import request
 
 def mtrpy():
     clientIP = request.environ.get('REMOTE_ADDR')
-    reportMTR = print mtr("-r","-w",clientIP)
+    reportMTR = mtr("-r","-w",clientIP, _bg=True)
     return reportMTR
 
