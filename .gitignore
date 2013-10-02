@@ -1,4 +1,10 @@
-application/env
-application/venv
+.DS_Store
 *.pyc
-#test
+*.pyo
+env
+env*
+dist
+*.egg
+*.egg-info
+_mailinglist
+.tox
