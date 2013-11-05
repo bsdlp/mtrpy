@@ -3,4 +3,4 @@ Jinja2==2.7.1
 MarkupSafe==0.18
 Werkzeug==0.9.4
 itsdangerous==0.23
-pbs==0.110
+sh==1.09
