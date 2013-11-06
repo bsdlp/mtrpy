@@ -14,3 +14,4 @@ def mtrpy():
 
     reportMTR = mtr("-r","-w",clientIP, _bg=True)
     return reportMTR.wait()
+
