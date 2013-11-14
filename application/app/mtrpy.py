@@ -10,7 +10,7 @@ def mtrpy():
     if not request.headers.getlist("X-Forwarded-For"):
         clientIP = request.remote_addr
     else:
-        clientIP = request.headers.getlist("X-Forwarded-For")[0]
+        clientIP = request.headers.getlist("X-Forwarded-For")[-1]
 
     reportMTR = mtr("-r","-w",clientIP, _bg=True)
     return reportMTR.wait()
