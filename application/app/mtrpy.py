@@ -4,6 +4,7 @@ from sh import mtr
 from flask import request
 import socket
 
+
 class MTR(object):
     def __init__(self, client_ip=None, user_agent=None):
         self.client_ip = client_ip
@@ -19,13 +20,13 @@ class MTR(object):
             client_ip = request.headers.getlist("X-Forwarded-For")[-1]
 
     def is_curl(self, user_agent):
-        if "curl" in agent:
+        if "curl" in user_agent:
             return True
         else:
             return False
 
-    def is_powershell(self,user_agent):
-        if "PowerShell" in agent:
+    def is_powershell(self, user_agent):
+        if "PowerShell" in user_agent:
             return True
         else:
             return False
@@ -48,6 +49,6 @@ def mtrpy():
     else:
         client_ip = request.headers.getlist("X-Forwarded-For")[-1]
 
-    reportMTR = mtr("-r","-w",client_ip, _bg=True)
+    reportMTR = mtr("-r", "-w", client_ip, _bg=True)
     return reportMTR.wait()
 
