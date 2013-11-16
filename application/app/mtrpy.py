@@ -37,18 +37,10 @@ class MTR(object):
         except socket.herror:
             return 'No PTR record for %s' % addr
 
-
-def mtrpy():
-    """
-    Janky-ass function for mtr via sh.
-    """
-
-    # janky-ass grab the user's ip addr
-    if not request.headers.getlist("X-Forwarded-For"):
-        client_ip = request.remote_addr
-    else:
-        client_ip = request.headers.getlist("X-Forwarded-For")[-1]
-
-    reportMTR = mtr("-r", "-w", client_ip, _bg=True)
-    return reportMTR.wait()
+    def report_mtr(self, addr):
+        if self.client_ip:
+            report = mtr("-r", "-w", self.client_ip, _bg=True)
+        else:
+            report = mtr("-r", "-w", addr, _bg=True)
+        return report.wait()
 
