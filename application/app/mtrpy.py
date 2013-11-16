@@ -15,9 +15,9 @@ class MTR(object):
 
     def get_client_ip(self):
         if not request.headers.getlist("X-Forwarded-For"):
-            client_ip = request.remote_addr
+            self.client_ip = request.remote_addr
         else:
-            client_ip = request.headers.getlist("X-Forwarded-For")[-1]
+            self.client_ip = request.headers.getlist("X-Forwarded-For")[-1]
 
     def is_curl(self, user_agent):
         if "curl" in user_agent:
@@ -31,7 +31,7 @@ class MTR(object):
         else:
             return False
 
-    def lookup(addr):
+    def lookup(self, addr):
         try:
             return socket.gethostbyaddr(addr)
         except socket.herror:
