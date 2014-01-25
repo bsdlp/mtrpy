@@ -1,6 +1,5 @@
 from flask import render_template
-from app import app
-from mtrpy import mtrpy
+from app import app, mtrpy
 
 
 @app.route('/')
