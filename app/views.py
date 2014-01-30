@@ -7,7 +7,13 @@ mtr = MTR()
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    mtr.get_user_agent()
+    mtr.get_client_ip()
+    if mtr.is_curl() or mtr.is_powershell():
+        reportMTR = mtr.report_mtr(mtr.client_ip)
+        return reportMTR
+    else:
+        return render_template('index.html')
 
 @app.route('/mtrwindow')
 def mtrwindow():
