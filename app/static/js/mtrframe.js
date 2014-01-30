@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.mtrWindow').load('/mtrWindowRequest');
+    $('.mtrWindow').load('/mtrwindow');
 });
 $(function() {
     $('input#mtrFormDOIT').bind('click', function() {

@@ -19,14 +19,14 @@ class MTR(object):
         else:
             self.client_ip = request.headers.getlist("X-Forwarded-For")[-1]
 
-    def is_curl(self, user_agent):
-        if "curl" in user_agent:
+    def is_curl(self):
+        if "curl" in self.user_agent:
             return True
         else:
             return False
 
-    def is_powershell(self, user_agent):
-        if "PowerShell" in user_agent:
+    def is_powershell(self):
+        if "PowerShell" in self.user_agent:
             return True
         else:
             return False
