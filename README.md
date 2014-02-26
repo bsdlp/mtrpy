@@ -24,7 +24,16 @@ pip install flask pbs
 **/etc/uwsgi/apps-available/mtrpy.ini**
 
 ```
-[uwsgi] plugins=python vhost=true socket=/tmp/mtrpy.sock
+[uwsgi]
+daemonize=/var/log/uwsgi/mtrpy.log
+uwsgi-file=/srv/http/mtrpy/run.py
+chdir=/srv/http/mtrpy/
+pyhome=/srv/http/mtrpy/env
+module=app
+virtualenv=/srv/http/mtrpy/env
+callable=app
+plugin=python33
+enable-threads=true
 ```
 
 **/etc/nginx/sites-available/mtrpy**
@@ -40,11 +49,7 @@ server {
 
     location / {
         include uwsgi_params;
-        uwsgi_pass unix:/tmp/mtrpy.sock;
-        uwsgi_param UWSGI_PYHOME /srv/www/mtrpy/application/env;
-        uwsgi_param UWSGI_CHDIR /srv/ww/mtrpy/application;
-        uwsgi_param UWSGI_MODULE app;
-        uwsgi_param UWSGI_CALLABLE app;
+        uwsgi_pass unix:/run/uwsgi/app/mtrpy/socket;
     }
 
     error 404 /404.html;
