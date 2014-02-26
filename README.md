@@ -1,8 +1,6 @@
 # mtrpy
 
-With [flask](http://flask.pocoo.org),
-[pbs](https://github.com/amoffat/pbs), and
-[mtr](http://www.bitwizard.nl/mtr/).
+With [flask](http://flask.pocoo.org), [mtr](http://www.bitwizard.nl/mtr/).
 
 Visit live demo here:
 
