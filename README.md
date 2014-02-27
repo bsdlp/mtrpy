@@ -37,6 +37,7 @@ enable-threads=true
 **/etc/nginx/sites-available/mtrpy**
 
 ```
+limit_req_zone  $binary_remote_addr  zone=one:10m   rate=1r/s;
 server {
     listen 80;
     server_name your.server.name.tld;
@@ -46,6 +47,12 @@ server {
     }
 
     location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/run/uwsgi/app/mtrpy/socket;
+    }
+
+    location /mtrwindow {
+        limit_req   zone=one  burst=5;
         include uwsgi_params;
         uwsgi_pass unix:/run/uwsgi/app/mtrpy/socket;
     }
