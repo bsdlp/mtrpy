@@ -13,7 +13,7 @@ curl http://mtr.io
 ## INSTALLATION
 
 ```
-sudo apt-get install nginx python python3-setuptools mtr-tiny \
+sudo apt-get install nginx python3 python3-setuptools mtr-tiny \
 git uwsgi uwsgi-plugin-python
 sudo pip install virtualenv
 cd /srv/www/mtrpy/application
