@@ -17,7 +17,7 @@ sudo apt-get install nginx python3 python3-setuptools mtr-tiny \
 git uwsgi uwsgi-plugin-python3
 sudo easy_install pip
 sudo pip install virtualenv
-cd /srv/www/mtrpy/application
+cd /srv/http/mtrpy/application
 virtualenv env
 source env/bin/activate
 pip install flask pbs
@@ -47,7 +47,7 @@ server {
     server_name your.server.name.tld;
 
     location /static {
-        alias /srv/www/mtrpy/static;
+        alias /srv/http/mtrpy/static;
     }
 
     location / {
