@@ -47,7 +47,7 @@ server {
     server_name your.server.name.tld;
 
     location /static {
-        alias /srv/http/mtrpy/static;
+        alias /srv/http/mtrpy/app/static;
     }
 
     location / {
