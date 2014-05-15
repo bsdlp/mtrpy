@@ -1,5 +1,5 @@
 from flask import Flask
-from .mtr import MTR
+from .mtrpy import MTR
 
 app = Flask(__name__)
 mtr = MTR()
