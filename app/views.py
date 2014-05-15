@@ -12,13 +12,15 @@ def index():
     else:
         return render_template('index.html')
 
+
 @app.route('/mtrwindow')
 def mtrwindow():
     mtr.get_client_ip()
     reportMTR = mtr.report_mtr(mtr.client_ip)
     return render_template('mtrwindow.html',
-                           clientIP = mtr.client_ip,
-                           reportMTR = reportMTR)
+                           clientIP=mtr.client_ip,
+                           reportMTR=reportMTR)
+
 
 @app.route('/sup')
 def sup():
