@@ -1,9 +1,6 @@
-from app import app, mtrpy
+from app import app, mtr
 from flask import render_template
-from app.mtrpy import MTR
 
-
-mtr = MTR()
 
 @app.route('/')
 def index():
