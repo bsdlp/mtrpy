@@ -102,11 +102,6 @@ th.md5 {
     width:                  50%;
 }
 
-th.dl {
-    border:                 1px single black;
-    width:                  15%;
-}
-
 .mtrWindowForm {
     text-align:             center;
     margin-left:            auto;
@@ -139,9 +134,3 @@ a:visited {
     color:                  #222222;
     text-decoration:        none;
 }
-
-embed.dl-svg {
-    height:                 1.5em;
-    width:                  1.5em;
-}
-
