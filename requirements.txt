@@ -3,7 +3,7 @@ Flask-Script==2.0.5
 Jinja2==2.7.3
 MarkupSafe==0.23
 Werkzeug==0.9.6
-flake8==2.2.4
+flake8==2.2.5
 itsdangerous==0.24
 mccabe==0.2.1
 pep8==1.5.7
