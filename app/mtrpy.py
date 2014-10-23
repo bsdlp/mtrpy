@@ -39,8 +39,8 @@ class MTR(object):
 
     def report_mtr(self, addr):
         if self.client_ip:
-            report = mtr("-r", "-w", self.client_ip, _bg=True)
+            report = mtr("--report-wide", self.client_ip, _bg=True)
         else:
-            report = mtr("-r", "-w", addr, _bg=True)
+            report = mtr("--report-wide", addr, _bg=True)
         return report.wait()
 
