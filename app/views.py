@@ -20,9 +20,3 @@ def mtrwindow():
     return render_template('mtrwindow.html',
                            clientIP=mtr.client_ip,
                            reportMTR=reportMTR)
-
-
-@app.route('/sup')
-def sup():
-    return "sup"
-
