@@ -31,12 +31,6 @@ class MTR(object):
         else:
             return False
 
-    def lookup(self, addr):
-        try:
-            return socket.gethostbyaddr(addr)
-        except socket.herror:
-            return 'No PTR record for %s' % addr
-
     def report_mtr(self, addr):
         if self.client_ip:
             report = mtr("--report-wide", self.client_ip, _bg=True)
