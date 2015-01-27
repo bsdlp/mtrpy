@@ -7,7 +7,7 @@ from flask import render_template
 def index():
     mtr = MTR()
     if mtr.is_curl or mtr.is_powershell:
-        return mtr.report_mtr(mtr.client_ip)
+        return mtr.report_mtr()
     else:
         return render_template('index.html')
 
@@ -17,4 +17,4 @@ def mtrwindow():
     mtr = MTR()
     return render_template(
         'mtrwindow.html', clientIP=mtr.client_ip,
-        reportMTR=mtr.report_mtr(mtr.client_ip))
+        reportMTR=mtr.report_mtr())

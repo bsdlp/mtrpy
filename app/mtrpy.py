@@ -30,10 +30,7 @@ class MTR(object):
         else:
             return False
 
-    def report_mtr(self, addr):
-        if self.client_ip:
-            report = mtr("--report-wide", self.client_ip, _bg=True)
-        else:
-            report = mtr("--report-wide", addr, _bg=True)
+    def report_mtr(self):
+        report = mtr("--report-wide", self.client_ip, _bg=True)
         return report.wait()
 
