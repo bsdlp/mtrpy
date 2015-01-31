@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 
 from sh import mtr
-from flask import request
 import socket
 
 
 class MTR(object):
-    def __init__(self, client_ip=None, user_agent=None):
+    def __init__(self, request, client_ip=None, user_agent=None):
         self.user_agent = str(request.user_agent)
-        self.get_client_ip()
+        self.get_client_ip(request)
         self.is_curl = self.is_curl()
         self.is_powershell = self.check_powershell()
 
-    def get_client_ip(self):
+    def get_client_ip(self, request):
         if not request.headers.getlist("X-Forwarded-For"):
             self.client_ip = request.remote_addr
         else:
